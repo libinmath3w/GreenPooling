@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_register"
+    tools:context="com.aksharam.greenpooling.activity.UserProfileActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="From"
+        android:textColor="@android:color/white"
+        android:textSize="17dp" />
+
+    .
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_alignParentEnd="true"
+        android:background="@color/input_register_bg"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/input_register"
+        android:textColorHint="@color/input_register_hint" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="115dp"
+        android:text="Destination"
+        android:textColor="@android:color/white"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/balance"
+        android:layout_marginTop="94dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/input_register"
+        android:textColorHint="@color/input_register_hint"
+        android:background="@color/input_register_bg"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginBottom="211dp"
+        android:text="Time"
+        android:textColor="@android:color/white"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/amount"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/input_register"
+        android:textColorHint="@color/input_register_hint"
+        android:background="@color/input_register_bg"
+        android:inputType="time" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="106dp"
+        android:layout_marginStart="26dp"
+        android:background="#ea4c88"
+        android:text="OK"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btn_ok"
+        android:layout_marginEnd="26dp"
+        android:background="#ea4c88"
+        android:text="CANCEL"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="198dp"
+        android:text="Available Seats"
+        android:textColor="@android:color/white"
+        android:textSize="17dp" />
+
+    <Spinner
+        android:id="@+id/pay_methods"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/balance"
+        android:layout_alignTop="@+id/textView10" />
+
+</RelativeLayout>
