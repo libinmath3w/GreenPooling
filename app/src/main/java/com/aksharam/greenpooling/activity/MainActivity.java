@@ -100,8 +100,13 @@ public class MainActivity extends AppCompatActivity {
 			Fragment fragment;
 			switch (item.getItemId()) {
 				case R.id.navigation_shop:
-					toolbar.setTitle("Search");
+				{
+					toolbar.setTitle("Shop");
+					Intent intent = new Intent(MainActivity.this, maptestactivity.class);
+					startActivity(intent);
+					finish();
 					return true;
+				}
 				case R.id.navigation_gifts:
 				{
 					toolbar.setTitle("Offer");
