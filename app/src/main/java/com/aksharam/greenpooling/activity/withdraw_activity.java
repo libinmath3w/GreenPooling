@@ -8,10 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import com.aksharam.greenpooling.R;
-import android.widget.AdapterView.OnItemSelectedListener;
+
 import android.widget.Toast;
 import com.aksharam.greenpooling.app.AppConfig;
 import com.aksharam.greenpooling.app.AppController;
@@ -62,9 +61,9 @@ public class withdraw_activity extends AppCompatActivity {
             String name = user.get("name");
             final String email = user.get("email");
 
-            balan = findViewById(R.id.balance);
+            balan = findViewById(R.id.et_from);
             accou = findViewById(R.id.account);
-            amou = (EditText) findViewById(R.id.amount);
+            amou = (EditText) findViewById(R.id.et_dest);
             ok = findViewById(R.id.btn_ok);
             cancel = findViewById(R.id.btn_cancel);
             final Spinner dropdown = findViewById(R.id.pay_methods);

@@ -46,7 +46,7 @@
         <activity android:name=".activity.AddvehicleActivity"/>
         <activity android:name=".activity.Admin_reportActivity" />
         <activity android:name=".activity.withdraw_activity"/>
-        <activity android:name=".activity.maptestactivity"/>
+        <activity android:name=".activity.MapActivity"/>
         <activity android:name=".activity.AddmoneyActivity"></activity>
     </application>
 
