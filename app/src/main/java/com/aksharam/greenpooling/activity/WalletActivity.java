@@ -28,6 +28,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.aksharam.greenpooling.app.AppConfig;
@@ -69,7 +70,7 @@ public class WalletActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-        prepareMovieData();
+//        prepareMovieData();
         // SqLite database handler
         db = new SQLiteHandler(getApplicationContext());
 
@@ -205,32 +206,30 @@ public class WalletActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
+                Log.d("ARRAY",response);
 
 
                 try {
+                    transactions movie = new transactions(method, account, amount);
                     JSONObject jObj = new JSONObject(response);
-                    boolean error = jObj.getBoolean("error");
+                    JSONArray contacts = jObj.getJSONArray("data");
+                    Log.d("ARRAY1",contacts.toString());
+                    for (int i = 0; i < contacts.length(); i++) {
+                        JSONObject c = contacts.getJSONObject(i);
 
-                    // Check for error node in json
-                    if (!error) {
-                        // user successfully logged in
-                        // Create login session
-                        session.setLogin(true);
 
-                        // Now store the user in SQLite
-                        String uid = jObj.getString("id");
-                        JSONObject user = jObj.getJSONObject("user");
-                        String email = user.getString("email");
-                        method = user.getString("method");
-                        amount = user.getString("amount");
-                        account = user.getString("account");
-                        Toast.makeText(getApplicationContext(),method + " " + amount,Toast.LENGTH_LONG).show();
-                    } else {
-                        // Error in login. Get the error message
-                        String errorMsg = jObj.getString("error_msg");
-                        Toast.makeText(getApplicationContext(),
-                                errorMsg, Toast.LENGTH_LONG).show();
+                        String email = c.getString("email");
+                        String method = c.getString("method");
+                        String amount = c.getString("amount");
+                        String account = c.getString("account");
+                        Log.d("ARRAY1",account);
+                        // Phone node is JSON Object
+                        movie = new transactions(method, amount, account);
+                        movieList.add(movie);
                     }
+                    mAdapter.notifyDataSetChanged();
+          boolean error = jObj.getBoolean("error");
+
                 } catch (JSONException e) {
                     // JSON error
                     e.printStackTrace();
@@ -261,37 +260,37 @@ public class WalletActivity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
-    private void prepareMovieData() {
-        transactions movie = new transactions(method, account, amount);
-        movieList.add(movie);
-
-        movie = new transactions("Inside Out", "Animation, Kids & Family", "2015");
-        movieList.add(movie);
-
-        movie = new transactions("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
-        movieList.add(movie);
-
-        movie = new transactions("Shaun the Sheep", "Animation", "2015");
-        movieList.add(movie);
-
-        movie = new transactions("The Martian", "Science Fiction & Fantasy", "2015");
-        movieList.add(movie);
-
-        movie = new transactions("Mission: Impossible Rogue Nation", "Action", "2015");
-        movieList.add(movie);
-
-        movie = new transactions("Up", "Animation", "2009");
-        movieList.add(movie);
-
-        movie = new transactions("Star Trek", "Science Fiction", "2009");
-        movieList.add(movie);
-
-        movie = new transactions("The LEGO Movie", "Animation", "2014");
-        movieList.add(movie);
-
-
-        mAdapter.notifyDataSetChanged();
-    }
+//    private void prepareMovieData() {
+//        transactions movie = new transactions(method, account, amount);
+//        movieList.add(movie);
+//
+//        movie = new transactions("Inside Out", "Animation, Kids & Family", "2015");
+//        movieList.add(movie);
+//
+//        movie = new transactions("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
+//        movieList.add(movie);
+//
+//        movie = new transactions("Shaun the Sheep", "Animation", "2015");
+//        movieList.add(movie);
+//
+//        movie = new transactions("The Martian", "Science Fiction & Fantasy", "2015");
+//        movieList.add(movie);
+//
+//        movie = new transactions("Mission: Impossible Rogue Nation", "Action", "2015");
+//        movieList.add(movie);
+//
+//        movie = new transactions("Up", "Animation", "2009");
+//        movieList.add(movie);
+//
+//        movie = new transactions("Star Trek", "Science Fiction", "2009");
+//        movieList.add(movie);
+//
+//        movie = new transactions("The LEGO Movie", "Animation", "2014");
+//        movieList.add(movie);
+//
+//
+//        mAdapter.notifyDataSetChanged();
+//    }
 }
 
 

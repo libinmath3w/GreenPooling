@@ -1,6 +1,7 @@
 package com.aksharam.greenpooling.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.aksharam.greenpooling.R;
 public class OfferRide extends AppCompatActivity {
     private Button ok,cancel;
     private Spinner avlseats;
+    private String frommapstemp , localfrom;
     private EditText from,dest,times;
     private ImageView fromgps,destgps;
 
@@ -37,21 +39,13 @@ public class OfferRide extends AppCompatActivity {
         destgps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),MapActivity.class);
+                Intent i = new Intent(getApplicationContext(),MapActivity2.class);
                 startActivity(i);
             }
         });
-        from.setOnClickListener(new View.OnClickListener() {
-          @Override
-         public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),MapActivity.class);
-                startActivity(i);
-    }
-});
 
-        String frommap = getIntent().getStringExtra("from");
+       String frommap = getIntent().getStringExtra("from");
         from.setText(frommap);
-
         dest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,8 +53,11 @@ public class OfferRide extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        String destmap = getIntent().getStringExtra("from");
-        dest.setText(destmap);
+        String destmap = getIntent().getStringExtra("dest");
+            dest.setText(destmap);
+
+
+
     }
 
 }

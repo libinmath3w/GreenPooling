@@ -3,6 +3,7 @@ package com.aksharam.greenpooling.activity;
 import android.*;
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -181,6 +182,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                         intent.putExtra("from",t );
                         startActivity(intent);
                         finish();
+
+                        // MY_PREFS_NAME - a static String variable like:
+//public static final String MY_PREFS_NAME = "MyPrefsFile";
+                       // SharedPreferences.Editor editor = getSharedPreferences("fromdest", MODE_PRIVATE).edit();
+                       // editor.putString("from", t);
+                        //editor.apply();
                     }
                 }catch (NullPointerException e){
                     Log.e(TAG, "onClick: NullPointerException: " + e.getMessage() );
