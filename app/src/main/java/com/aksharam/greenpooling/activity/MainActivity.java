@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 				case R.id.navigation_shop:
 				{
 					toolbar.setTitle("Shop");
-					Intent intent = new Intent(MainActivity.this, maptestactivity.class);
+					Intent intent = new Intent(MainActivity.this, MapActivity.class);
 					startActivity(intent);
 					finish();
 					return true;
