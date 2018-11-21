@@ -919,11 +919,14 @@ drawable ic_edit_black_24dp
 drawable ic_email_black_24dp
 drawable ic_forum_black_24dp
 drawable ic_globe_primary_24dp
+drawable ic_gps
+drawable ic_gps_fixed_black_24dp
 drawable ic_gps_fixed_white_24dp
 drawable ic_group_add_black_24dp
 drawable ic_launcher
 drawable ic_lock_outline_black_24dp
 drawable ic_logout
+drawable ic_magnify
 drawable ic_my_location_primary_24dp
 drawable ic_notifications_active_primary_24dp
 drawable ic_person_white_24dp
@@ -956,6 +959,7 @@ drawable powered_by_google_dark
 drawable powered_by_google_light
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable white_border
 id ALT
 id CTRL
 id FUNCTION
@@ -990,10 +994,9 @@ id adjust_width
 id alertTitle
 id all
 id always
-id amount
 id async
 id auto
-id balance
+id available_seats
 id barrier
 id beginning
 id blocking
@@ -1051,6 +1054,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id destgps
 id dimensions
 id direct
 id disableHome
@@ -1064,6 +1068,9 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id et_dest
+id et_from
+id et_time
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1075,6 +1082,7 @@ id fill_vertical
 id fixed
 id forever
 id frame_container
+id fromgps
 id gender
 id genre
 id ghost_view
@@ -1083,12 +1091,15 @@ id groups
 id home
 id homeAsUp
 id hybrid
+id ic_gps
+id ic_magnify
 id icon
 id icon_group
 id icon_only
 id ifRoom
 id image
 id info
+id input_search
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1103,6 +1114,7 @@ id list_item
 id location_permission_checkbox
 id logout
 id make_category
+id map
 id masked
 id media_actions
 id message
@@ -1150,6 +1162,8 @@ id place_autocomplete_progress
 id place_autocomplete_search_button
 id place_autocomplete_search_input
 id place_autocomplete_separator
+id place_info
+id place_picker
 id places_list_recycler_view
 id progress_circular
 id progress_horizontal
@@ -1158,6 +1172,7 @@ id radio
 id rating
 id recycler_view
 id registerno
+id relLayout1
 id reply
 id restart
 id reverse
@@ -1197,6 +1212,7 @@ id smallLabel
 id snackbar_action
 id snackbar_text
 id snap
+id snippet
 id spacer
 id split_action_bar
 id spread
@@ -1327,6 +1343,7 @@ layout admin_userlist
 layout admin_usersreport
 layout admin_withdraw
 layout change_password
+layout custom_info_window
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1344,6 +1361,7 @@ layout design_text_input_password_icon
 layout fragment_bike
 layout fragment_car
 layout item_place_card
+layout map_activity
 layout map_test
 layout my_profile
 layout my_wallet

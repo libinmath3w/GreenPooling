@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="20"
+        android:minSdkVersion="21"
         android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -59,7 +59,8 @@
         <activity android:name="com.aksharam.greenpooling.activity.AddvehicleActivity" />
         <activity android:name="com.aksharam.greenpooling.activity.Admin_reportActivity" />
         <activity android:name="com.aksharam.greenpooling.activity.withdraw_activity" />
-        <activity android:name="com.aksharam.greenpooling.activity.maptestactivity" />
+        <activity android:name="com.aksharam.greenpooling.activity.MapActivity" />
+        <activity android:name="com.aksharam.greenpooling.activity.OfferRide" />
         <activity android:name="com.aksharam.greenpooling.activity.AddmoneyActivity" />
         <activity
             android:name="com.karumi.dexter.DexterActivity"

@@ -57,9 +57,7 @@ import java.util.Map;
 
 import com.aksharam.greenpooling.provider.PlaceInfo;
 
-/**
- * Created by User on 10/2/2017.
- */
+
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback,
         GoogleApiClient.OnConnectionFailedListener{
@@ -100,7 +98,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final LatLngBounds LAT_LNG_BOUNDS = new LatLngBounds(
             new LatLng(-40, -168), new LatLng(71, 136));
 
-
+    private String t;
     //widgets
     private AutoCompleteTextView mSearchText;
     private ImageView mGps, mInfo, mPlacePicker;
@@ -179,6 +177,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     }else{
                         Log.d(TAG, "onClick: place info: " + mPlace.toString());
                         mMarker.showInfoWindow();
+                        Intent intent = new Intent(getBaseContext(), OfferRide.class);
+                        intent.putExtra("from",t );
+                        startActivity(intent);
+                        finish();
                     }
                 }catch (NullPointerException e){
                     Log.e(TAG, "onClick: NullPointerException: " + e.getMessage() );
@@ -287,6 +289,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                         "Phone Number: " + placeInfo.getPhoneNumber() + "\n" +
                         "Website: " + placeInfo.getWebsiteUri() + "\n" +
                         "Price Rating: " + placeInfo.getRating() + "\n";
+
+                t = placeInfo.getAddress();
+
 
                 MarkerOptions options = new MarkerOptions()
                         .position(latLng)

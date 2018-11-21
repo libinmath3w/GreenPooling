@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-53:12
+ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-54:12
 MERGED from [com.android.databinding:adapters:3.2.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\adapters-3.2.0.aar\9ba2853132ba3262a97890a61c3ef8b3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.databinding:library:3.2.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\library-3.2.0.aar\6c5e5b894f8f26dc297d13b577cc0d32\AndroidManifest.xml:17:1-24:12
 MERGED from [com.karumi:dexter:4.2.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\616edd7d5a29e79578d09f5329cd01c8\AndroidManifest.xml:17:1-32:12
@@ -38,9 +38,9 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Rocket\.gradle
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\17149000aaff4728e23616d4b4b34205\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\94a1a67f0c450138668e5aecbcfbeb41\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\ac4ba13298d5c43220a2bc8b7de74d77\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml
@@ -70,7 +70,7 @@ ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
 		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:11:5-51:19
+ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:11:5-52:19
 MERGED from [com.karumi:dexter:4.2.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\616edd7d5a29e79578d09f5329cd01c8\AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:4.2.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\616edd7d5a29e79578d09f5329cd01c8\AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.gms:play-services-places:16.0.0] C:\Users\Rocket\.gradle\caches\transforms-1\files-1.1\play-services-places-16.0.0.aar\8e5ebc1658777f3fce7194e508ba95fd\AndroidManifest.xml:22:5-20
@@ -183,14 +183,18 @@ activity#com.aksharam.greenpooling.activity.withdraw_activity
 ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:48:9-63
 	android:name
 		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:48:19-61
-activity#com.aksharam.greenpooling.activity.maptestactivity
-ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:49:9-61
+activity#com.aksharam.greenpooling.activity.MapActivity
+ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:49:9-57
 	android:name
-		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:49:19-59
+		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:49:19-55
+activity#com.aksharam.greenpooling.activity.OfferRide
+ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:50:9-55
+	android:name
+		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:50:19-53
 activity#com.aksharam.greenpooling.activity.AddmoneyActivity
-ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:50:9-72
+ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:51:9-62
 	android:name
-		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:50:19-60
+		ADDED from F:\project\green 20.11\app\src\main\AndroidManifest.xml:51:19-60
 uses-sdk
 INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\project\green 20.11\app\src\main\AndroidManifest.xml

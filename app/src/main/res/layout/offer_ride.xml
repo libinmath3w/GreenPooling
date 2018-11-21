@@ -123,10 +123,11 @@
 
     <Spinner
         android:id="@+id/available_seats"
-        android:layout_width="215dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/et_from"
-        android:layout_alignTop="@+id/textView10" />
+        android:layout_width="207dp"
+        android:layout_height="50sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="178dp" />
 
     <ImageView
         android:id="@+id/fromgps"

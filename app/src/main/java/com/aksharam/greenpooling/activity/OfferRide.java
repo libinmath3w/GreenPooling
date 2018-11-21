@@ -48,6 +48,19 @@ public class OfferRide extends AppCompatActivity {
                 startActivity(i);
     }
 });
+
+        String frommap = getIntent().getStringExtra("from");
+        from.setText(frommap);
+
+        dest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),MapActivity.class);
+                startActivity(i);
+            }
+        });
+        String destmap = getIntent().getStringExtra("from");
+        dest.setText(destmap);
     }
 
 }
