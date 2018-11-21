@@ -41,7 +41,13 @@ public class OfferRide extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        from.setOnClickListener(new View.OnClickListener() {
+          @Override
+         public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),MapActivity.class);
+                startActivity(i);
+    }
+});
     }
 
 }

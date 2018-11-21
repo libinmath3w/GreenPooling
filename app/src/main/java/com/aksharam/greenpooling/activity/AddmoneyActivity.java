@@ -15,8 +15,6 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 import com.aksharam.greenpooling.app.AppConfig;
 import com.aksharam.greenpooling.app.AppController;
-import com.aksharam.greenpooling.helper.SQLiteHandler;
-import com.aksharam.greenpooling.helper.SessionManager;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -43,7 +41,7 @@ public class AddmoneyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_money);
-        amou=(EditText)findViewById(R.id.amount);
+        amou=(EditText)findViewById(R.id.et_dest);
         ok=(Button) findViewById(R.id.btn_ok);
         cancel=(Button)findViewById(R.id.btn_cancel);
         gateway=(RadioGroup)findViewById(R.id.paymentway);

@@ -21,7 +21,7 @@
     .
 
     <TextView
-        android:id="@+id/balance"
+        android:id="@+id/et_from"
         android:layout_width="207dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView7"
@@ -46,11 +46,11 @@
         android:text="Amount" />
 
     <EditText
-        android:id="@+id/amount"
+        android:id="@+id/et_dest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/balance"
+        android:layout_alignStart="@+id/et_from"
         android:layout_marginTop="94dp"
         android:ems="10"
         android:padding="10dp"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/amount"
+        android:layout_alignStart="@+id/et_dest"
         android:layout_marginBottom="200dp"
         android:ems="10"
         android:padding="10dp"
@@ -124,6 +124,6 @@
         android:id="@+id/pay_methods"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/balance"
+        android:layout_alignStart="@+id/et_from"
         android:layout_alignTop="@+id/textView10" />
 </RelativeLayout>

@@ -17,7 +17,7 @@
         android:text="Amount" />
 
     <EditText
-        android:id="@+id/amount"
+        android:id="@+id/et_dest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

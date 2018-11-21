@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_register"
+    android:orientation="vertical"
     tools:context="com.aksharam.greenpooling.activity.UserProfileActivity">
 
     <TextView
@@ -19,17 +20,16 @@
         android:textColor="@android:color/white"
         android:textSize="17dp" />
 
-    .
 
-    <TextView
-        android:id="@+id/balance"
+    <EditText
+        android:id="@+id/et_from"
         android:layout_width="207dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignParentEnd="true"
         android:background="@color/input_register_bg"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/input_register"
@@ -47,19 +47,19 @@
         android:textSize="17dp" />
 
     <EditText
-        android:id="@+id/amount"
+        android:id="@+id/et_dest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/balance"
+        android:layout_alignStart="@+id/et_from"
         android:layout_marginTop="94dp"
+        android:background="@color/input_register_bg"
         android:ems="10"
+        android:inputType="text"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/input_register"
-        android:textColorHint="@color/input_register_hint"
-        android:background="@color/input_register_bg"
-        android:inputType="number" />
+        android:textColorHint="@color/input_register_hint" />
 
     <TextView
         android:id="@+id/textView9"
@@ -73,19 +73,19 @@
         android:textSize="17dp" />
 
     <EditText
-        android:id="@+id/account"
+        android:id="@+id/et_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/amount"
+        android:layout_alignStart="@+id/et_dest"
         android:layout_marginBottom="200dp"
+        android:background="@color/input_register_bg"
         android:ems="10"
+        android:inputType="time"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/input_register"
-        android:textColorHint="@color/input_register_hint"
-        android:background="@color/input_register_bg"
-        android:inputType="time" />
+        android:textColorHint="@color/input_register_hint" />
 
     <Button
         android:id="@+id/btn_ok"
@@ -122,10 +122,27 @@
         android:textSize="17dp" />
 
     <Spinner
-        android:id="@+id/pay_methods"
+        android:id="@+id/available_seats"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/balance"
+        android:layout_alignStart="@+id/et_from"
         android:layout_alignTop="@+id/textView10" />
+
+    <ImageView
+        android:id="@+id/fromgps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_alignTop="@+id/textView7"
+        app:srcCompat="@drawable/ic_gps_fixed_white_24dp" />
+
+    <ImageView
+        android:id="@+id/destgps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="107dp"
+        app:srcCompat="@drawable/ic_gps_fixed_black_24dp" />
 
 </RelativeLayout>

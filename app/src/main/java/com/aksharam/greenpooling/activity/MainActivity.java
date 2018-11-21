@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
 			switch (item.getItemId()) {
 				case R.id.navigation_shop:
 				{
-					toolbar.setTitle("Shop");
-					Intent intent = new Intent(MainActivity.this, MapActivity.class);
+					toolbar.setTitle("Offer Ride");
+					Intent intent = new Intent(MainActivity.this, OfferRide.class);
 					startActivity(intent);
 					finish();
 					return true;
