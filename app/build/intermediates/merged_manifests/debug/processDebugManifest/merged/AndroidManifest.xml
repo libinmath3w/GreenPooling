@@ -26,6 +26,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD26nMNj0CB7qm2FvHTn_6rPhTQvreUq5o" />
+
         <activity
             android:name="com.aksharam.greenpooling.activity.LoginActivity"
             android:label="@string/app_name"
@@ -54,6 +58,7 @@
         <activity android:name="com.aksharam.greenpooling.activity.AddvehicleActivity" />
         <activity android:name="com.aksharam.greenpooling.activity.Admin_reportActivity" />
         <activity android:name="com.aksharam.greenpooling.activity.withdraw_activity" />
+        <activity android:name="com.aksharam.greenpooling.activity.maptestactivity" />
         <activity android:name="com.aksharam.greenpooling.activity.AddmoneyActivity" />
         <activity
             android:name="com.karumi.dexter.DexterActivity"
