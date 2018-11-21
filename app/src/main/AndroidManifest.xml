@@ -48,6 +48,7 @@
         <activity android:name=".activity.withdraw_activity"/>
         <activity android:name=".activity.MapActivity"/>
         <activity android:name=".activity.OfferRide"/>
+        <activity android:name=".activity.MapActivity2"/>
         <activity android:name=".activity.AddmoneyActivity"/>
     </application>
 
