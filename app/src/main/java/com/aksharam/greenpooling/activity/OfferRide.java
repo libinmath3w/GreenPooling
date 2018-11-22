@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aksharam.greenpooling.R;
@@ -22,9 +23,10 @@ import java.util.HashMap;
 public class OfferRide extends AppCompatActivity {
     private Button ok,cancel;
     private Spinner avlseats,my_vehicle;
-    private String frommapstemp , localfrom,vehiclesspinner;
-    private EditText from,dest,times;
-    private ImageView fromgps,destgps;
+    private String frommapstemp , localfrom,vehiclesspinner,timestext;
+    private EditText from,dest;
+    private TextView times;
+    private ImageView fromgps,destgps,timechoose;
     private SQLiteHandler db;
     private ProgressDialog pDialog;
     private SessionManager session;
@@ -68,11 +70,19 @@ public class OfferRide extends AppCompatActivity {
         }
         fromgps = (ImageView)findViewById(R.id.fromgps);
         destgps = (ImageView)findViewById(R.id.destgps);
+        timechoose= (ImageView)findViewById(R.id.clocks);
         from = (EditText)findViewById(R.id.et_from);
         dest = (EditText)findViewById(R.id.et_dest);
-        times = (EditText)findViewById(R.id.et_time);
+        times = (TextView) findViewById(R.id.tt_time);
         ok = (Button)findViewById(R.id.btn_ok);
         cancel = (Button)findViewById(R.id.btn_cancel);
+        timestext = "test";
+        if (timestext != null ) {
+            times.setText(timestext);
+        }
+        else {
+            times.setText("");
+        }
         fromgps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,6 +115,14 @@ public class OfferRide extends AppCompatActivity {
                 public void onClick(View v) {
 
                     Toast.makeText(getApplicationContext(),vehiclesspinner,Toast.LENGTH_LONG).show();
+                }
+            });
+
+            timechoose.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(),timepickactivity.class);
+                    startActivity(i);
                 }
             });
 
